@@ -101,7 +101,6 @@ export default {
 
         chats.forEach((chat) => {
           this.messages.push({
-            id: crypto.randomUUID(),
             message: chat.message,
             time: chat.time,
             username: chat.user.profile?.displayName || chat.user.username,
@@ -287,11 +286,6 @@ input {
   font-size: 12px;
 }
 
-.pfp {
-  max-width: 28px;
-  max-height: 28px;
-  object-fit: cover;
-}
 
 .send-btn {
   background-color: #29487d;
