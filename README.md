@@ -17,9 +17,6 @@ This project is inspired by <a href="chat.ponkis.xyz">chat.ponkis.xyz</a>, I too
 ### Chat Page
 <img width="1839" height="973" alt="image" src="https://github.com/user-attachments/assets/872dc68a-121d-469f-a2d9-cfd9c958711e" />
 
-### User Timeline Page
-<img width="1815" height="971" alt="image" src="https://github.com/user-attachments/assets/e3a5ca67-741e-4ec8-84e6-6ff3f05872e6" />
-
 ## Installation
 1. Clone the repository
    
