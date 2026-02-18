@@ -64,17 +64,17 @@
       </div>
 
       <div class="p-4 bg-amber-100/40">
-        <ul class="list-disc space-y-2 list-inside marker:text-amber-600 marker:font-bold marker:text-lg">
+        <ul class="list-disc space-y-2 list-inside marker:text-amber-800/60 marker:font-bold marker:text-lg">
           <li>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit!</span>
+            <span>Use the email and password you registered with.</span>
           </li>
 
           <li>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit!</span>
+            <span>Forgot your password? You can reset it anytime.</span>
           </li>
 
           <li>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit!</span>
+            <span>For your security, never share your password.</span>
           </li>
         </ul>
 
