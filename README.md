@@ -14,7 +14,8 @@ This project is inspired by <a href="https://chat.ponkis.xyz">chat.ponkis.xyz</a
 ### Login Page
 ---
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5bf4ca5a-7a4b-4892-8ee6-13f551be43c2" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e7e52043-7ed8-4c45-bd13-8f668dcaaab4" />
+
 
 
 ### Chat Page
