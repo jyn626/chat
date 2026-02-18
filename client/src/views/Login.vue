@@ -22,17 +22,29 @@
           class="border border-gray-400 px-4 py-1.5 w-full shadow-inner outline-none" />
       </label>
 
-      <label>password
+      <label class="mt-6">
+        password
         <input type="password" placeholder="Password" v-model="password" name="password"
           class="border border-gray-400 px-4 py-1.5 w-full shadow-inner outline-none mt-2" />
       </label>
 
+      <div class="flex flex-col gap-4">
 
-      <button :disabled="isLoading"
-        class="w-full px-3 py-4 text-white mt-5 flex items-center justify-center cursor-pointer hover:shadow-md inset-shadow-xs inset-shadow-white/50  enter-btn">
-        <vue-spinner v-if="isLoading" size="20"></vue-spinner>
-        <span v-else class="font-bold tracking-wider">login</span>
-      </button>
+        <button :disabled="isLoading"
+          class="w-full px-3 py-4 text-white mt-5 flex items-center justify-center cursor-pointer hover:shadow-md inset-shadow-xs inset-shadow-white/50  enter-btn">
+          <vue-spinner v-if="isLoading" size="20"></vue-spinner>
+          <span v-else class="font-bold tracking-wider">login</span>
+        </button>
+
+
+        <router-link class="text-center ">
+          <span>
+            forgot password?
+          </span>
+        </router-link>
+
+      </div>
+
       <!-- <router-link to="/register">
         <button
           class="text-[#29487d] w-full p-3 mt-2 shadow-inner border border-gray-200 cursor-pointer hover:scale-105 duration-200 transition-all ease-in">
