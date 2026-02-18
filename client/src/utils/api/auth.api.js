@@ -22,12 +22,9 @@ export default {
     }
   },
 
-  async register(username, password) {
+  async register(data) {
     try {
-      const response = await api.post("/auth/register", {
-        username,
-        password,
-      });
+      const response = await api.post("/auth/register", data);
 
       return response;
     } catch (error) {
