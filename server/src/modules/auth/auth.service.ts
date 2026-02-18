@@ -23,24 +23,15 @@ export class AuthService {
     if (password.length < 6) {
       throw new AppError("Password must be atleast 6 characters", 409);
     }
+    const existingUser = await this.userRepository.findByUsername(username);
 
-    try {
-      const existingUser = await this.userRepository.findByUsername(username);
-
-      if (existingUser) {
-        throw new AppError("Username already taken", 409);
-      }
-
-      const user = await this.userRepository.create({ username, password });
-
-      return user;
-    } catch (error: any) {
-      if (error?.message == 'USER_NOT_FOUND') {
-        throw new AppError('User not found.', 404);
-      }
-
-      throw new AppError('Failed to register user', 500);
+    if (existingUser) {
+      throw new AppError("Username already taken", 409);
     }
+
+    const user = await this.userRepository.create({ username, password });
+
+    return user;
   }
 
   async login(payload: LoginDto) {

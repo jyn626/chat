@@ -15,8 +15,3 @@ export interface IPostRepository {
   show(id: number): Promise<Post | null>;
   total(userId: number): Promise<number>;
 }
-
-// export interface PostPaginate {
-//   posts: Post[];
-//   total: number;
-// }

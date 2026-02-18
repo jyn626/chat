@@ -9,6 +9,7 @@ export class PostService {
   async getAll(userId: number, page: number, limit: number, skip: number) {
     const posts = await this.postRepo.getAll(userId, limit, skip);
     const total = await this.postRepo.total(userId);
+
     return {
       posts,
       meta: {
