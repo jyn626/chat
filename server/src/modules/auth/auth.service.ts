@@ -29,15 +29,19 @@ export class AuthService {
       throw new AppError("Username already taken", 409);
     }
 
-    const user = await this.userRepository.create({ username, password });
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const user = await this.userRepository.create({ username, password: hashedPassword });
 
     return user;
   }
 
   async login(payload: LoginDto) {
     try {
-      const { username } = payload;
+      const username = payload.username;
       const _password = payload.password;
+
+      console.log(payload)
+
       if (!username || !_password) {
         throw new AppError("Please fill in missing fields..", 400);
       }
@@ -45,7 +49,7 @@ export class AuthService {
       const user = await this.userRepository.findByUsername(username);
 
       if (!user || !(await bcrypt.compare(_password, user.password))) {
-        throw new AppError('Invalid account, please double check your username or password', 401)
+        throw new AppError('Invalid username or password.', 401)
       }
 
       const { password, ...safeUser } = user;
