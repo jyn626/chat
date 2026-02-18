@@ -31,7 +31,6 @@ body {
   justify-content: center;
   align-items: center;
   /* flex-direction: column; */
-  font-size: 14px;
   min-height: 100vh;
   margin: 0;
   padding: 12px;
