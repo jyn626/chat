@@ -1,6 +1,6 @@
 <template>
-  <form v-motion-fade class=" p-4 w-[340px] h-[400px]  border border-slate-400 shadow-md" @submit.prevent="login">
-    <div class="mt-4 mb-6">
+  <form v-motion-fade class=" w-[340px] min:h-[400px]  border border-slate-400 shadow-md" @submit.prevent="login">
+    <div class="mt-4 mb-6 py-2 px-4 ">
       <h4 class="font-bold text-center text-slate-800" style="font-size: 22px;">Welcome</h4>
       <h4 class="font-light text-center text-slate-800" style="font-size: 14px;">please login</h4>
       <div class="flex items-center justify-center">
@@ -15,7 +15,7 @@
 
     <!-- <div class="border border-dashed w-full border-gray-300"></div> -->
 
-    <div class="mt-2">
+    <div class="mt-2 px-4 ">
 
       <label>username
         <input type="text" placeholder="Username" v-model="username" name="username"
@@ -52,6 +52,37 @@
         </button>
       </router-link> -->
     </div>
+
+
+    <!-- tips -->
+    <div>
+
+
+      <div
+        class="border-t border-b border-gray-400 inset-shadow-sm inset-shadow-gray-200 mt-6  py-4 flex items-center justify-center">
+        <span class="font-bold">tips</span>
+      </div>
+
+      <div class="p-4 bg-amber-100/40">
+        <ul class="list-disc space-y-2 list-inside marker:text-amber-600 marker:font-bold marker:text-lg">
+          <li>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit!</span>
+          </li>
+
+          <li>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit!</span>
+          </li>
+
+          <li>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit!</span>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
   </form>
   <!-- 
   <footer class="w-full text-center">
