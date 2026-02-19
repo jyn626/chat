@@ -19,13 +19,13 @@
 
       <label>username
         <input type="text" placeholder="Username" v-model="username" name="username"
-          class="border border-gray-400 px-4 py-1.5 w-full shadow-inner outline-none" />
+          class="border border-gray-400 px-4 py-1.5 w-full shadow-inner outline-none mb-3" />
       </label>
 
-      <label class="mt-6">
+      <label>
         password
         <input type="password" placeholder="Password" v-model="password" name="password"
-          class="border border-gray-400 px-4 py-1.5 w-full shadow-inner outline-none mt-2" />
+          class="border border-gray-400 px-4 py-1.5 w-full shadow-inner outline-none" />
       </label>
 
       <div class="flex flex-col gap-4">
