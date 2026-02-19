@@ -59,7 +59,7 @@
 
 
       <div
-        class="border-t border-b border-gray-400 inset-shadow-sm inset-shadow-gray-200 mt-6  py-4 flex items-center justify-center">
+        class="border-t border-b border-gray-400 inset-shadow-sm inset-shadow-gray-200 mt-6  py-2 flex items-center justify-center">
         <span class="font-bold">tips</span>
       </div>
 
