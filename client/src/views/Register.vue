@@ -2,15 +2,16 @@
   <div class="bg-white w-[340px] min:h-[400px]  border  border-slate-400 shadow-md">
 
     <div class="w-full flex items-center justify-center  ">
-      <router-link to='/' class="text-center flex-1 font-bold bg-primary text-white py-2">login</router-link>
-      <router-link to='/create-account' class="text-center flex-1 font-bold text-slate-600 py-2">create
+      <router-link to='/' class="text-center flex-1 font-bold text-slate-600 py-2">login</router-link>
+      <router-link to='/create-account' class="text-center flex-1 font-bold bg-primary text-white  py-2">create
         account</router-link>
     </div>
 
     <form v-motion-fade class="" @submit.prevent="login">
       <div class="mt-4 mb-6 py-2 px-4 ">
-        <h4 class="font-bold text-center text-slate-800" style="font-size: 22px;">Welcome</h4>
-        <h4 class="font-light text-center text-slate-800" style="font-size: 14px;">please login</h4>
+        <h2 class="font-bold text-center text-slate-800" style="font-size: 22px;">Welcome</h2>
+        <h4 class="font-light text-center text-slate-800 " style="font-size: 14px;">create your account and join the
+          chat</h4>
         <div class="flex items-center justify-center">
           <span v-motion-fade v-if="errorMessage"
             class="flex-1 bg-red-100 border border-red-300-300 p-2 text-red-800 shadow-inner mt-2">{{ errorMessage
@@ -24,17 +25,19 @@
 
       <!-- <div class="border border-dashed w-full border-gray-300"></div> -->
 
-      <div class="mt-2 px-4 ">
+      <div class="mt-2 px-4 flex flex-col">
 
-        <label>username
-          <input type="text" placeholder="Username" v-model="username" name="username"
-            class="border border-gray-400 px-4 py-1.5 w-full shadow-inner outline-none mb-3" />
+        <label class="mb-3">choose a username
+          <input type="text" placeholder="Pick a unique username" v-model="username" name="username"
+            class="border border-gray-400 px-4 py-1.5 w-full shadow-inner outline-none " />
+          <small class="text-slate-500 ">3-20 characters, letters & numbers only.</small>
         </label>
 
         <label>
-          password
-          <input type="password" placeholder="Password" v-model="password" name="password"
+          create password
+          <input type="password" placeholder="Make sure it's secure" v-model="password" name="password"
             class="border border-gray-400 px-4 py-1.5 w-full shadow-inner outline-none" />
+          <small class="text-slate-500 ">Minimun of 4 characters.</small>
         </label>
 
         <div class="flex flex-col gap-4">
@@ -104,18 +107,22 @@
   transition: all 0.3s ease;
 }
 
+small {
+  font-size: 10.5px;
+}
+
 .enter-btn:hover {
-  scale: 1.1;
-  transform: rotate(1deg);
+  scale: 1.02;
+  /* transform: rotate(1deg); */
 }
 
 input {
   animation: default 0.3s forwards;
 }
 
-input:focus {
+/* input:focus {
   animation: lift 0.3s forwards;
-}
+} */
 
 @keyframes lift {
   from {
