@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white w-[340px] min:h-[400px]  border  border-slate-400 shadow-md">
+  <div class="bg-white w-[422px]  min:h-[400px]  border  border-slate-400 shadow-md">
 
     <div class="w-full flex items-center justify-center  ">
       <router-link to='/' class="text-center flex-1 font-bold text-slate-600 py-2">login</router-link>
@@ -76,7 +76,8 @@
         </div>
 
         <div class="p-4 bg-amber-100/40">
-          <ul class="list-disc space-y-2 list-inside marker:text-amber-400/80 marker:font-bold marker:text-lg">
+          <ul
+            class="list-disc space-y-2 list-inside marker:text-amber-400/80 marker:font-bold marker:text-lg text-amber-900/70 text-xs">
             <li>
               <span>choose a strong password to keep your account secure</span>
             </li>
