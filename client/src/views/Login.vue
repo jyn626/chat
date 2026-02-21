@@ -126,9 +126,9 @@ input {
   animation: lift 0.3s forwards;
 } */
 
-form {
+/* form {
   animation: stretch 0.5s;
-}
+} */
 
 @keyframes stretch {
   from {
