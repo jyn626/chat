@@ -2,8 +2,9 @@
   <div class="bg-white w-[340px] min:h-[400px]  border  border-slate-400 shadow-md">
 
     <div class="w-full flex items-center justify-center  ">
-      <button class="flex-1 font-bold bg-primary text-white py-2">login</button>
-      <button class="flex-1 font-bold text-slate-600 py-2">create account</button>
+      <router-link to='/' class="text-center flex-1 font-bold bg-primary text-white py-2">login</router-link>
+      <router-link to='/create-account' class="text-center flex-1 font-bold text-slate-600 py-2">create
+        account</router-link>
     </div>
 
     <form v-motion-fade class="" @submit.prevent="login">

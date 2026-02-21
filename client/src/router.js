@@ -16,7 +16,7 @@ const routes = [
     meta: { requiresGuest: true }
   },
   {
-    path: '/register',
+    path: '/create-account',
     component: RegisterView,
     meta: { requiresGuest: true }
   },
