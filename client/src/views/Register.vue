@@ -76,7 +76,7 @@
         </div>
 
         <div class="p-4 bg-amber-100/40">
-          <ul class="list-disc space-y-2 list-inside marker:text-amber-800/60 marker:font-bold marker:text-lg">
+          <ul class="list-disc space-y-2 list-inside marker:text-amber-400/80 marker:font-bold marker:text-lg">
             <li>
               <span>choose a strong password to keep your account secure</span>
             </li>
