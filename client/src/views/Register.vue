@@ -45,15 +45,15 @@
           <button :disabled="isLoading"
             class="w-full px-3 py-4 text-white mt-5 flex items-center justify-center cursor-pointer hover:shadow-md inset-shadow-xs inset-shadow-white/50  enter-btn">
             <vue-spinner v-if="isLoading" size="20"></vue-spinner>
-            <span v-else class="font-bold tracking-wider">login</span>
+            <span v-else class="font-bold tracking-wider">create account</span>
           </button>
 
 
-          <router-link class="text-center ">
+          <!-- <router-link class="text-center ">
             <span>
               forgot password?
             </span>
-          </router-link>
+          </router-link> -->
 
         </div>
 
@@ -78,15 +78,15 @@
         <div class="p-4 bg-amber-100/40">
           <ul class="list-disc space-y-2 list-inside marker:text-amber-800/60 marker:font-bold marker:text-lg">
             <li>
-              <span>Use the email and password you registered with.</span>
+              <span>choose a strong password to keep your account secure</span>
             </li>
 
             <li>
-              <span>Forgot your password? You can reset it anytime.</span>
+              <span>use an email you check often, so you don’t miss anything!</span>
             </li>
 
             <li>
-              <span>For your security, never share your password.</span>
+              <span>for your security, never share your password.</span>
             </li>
           </ul>
 
