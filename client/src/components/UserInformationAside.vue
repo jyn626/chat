@@ -1,6 +1,6 @@
 <template>
   <!-- Change from h-[100%] to flex-1 and ensure proper height -->
-  <div v-motion-fade class="bg-white border border-gray-200 p-4 w-full lg:w-[200px] overflow-y-auto">
+  <div v-motion-fade class="bg-white border border-gray-200  w-full lg:w-[200px] overflow-y-auto">
     <div v-if="user" class="flex flex-col items-center justify-center">
       <!-- pfp -->
       <img :src="user.profile && user.profile.profilePicture
@@ -13,13 +13,14 @@
         <small class="block font-normal text-gray-600">@{{ user.username }}</small>
       </h1>
       <!-- bio -->
-      <div class="my-4 border-b border-gray-400 w-full text-center">
-        <span><i>no bio yet...</i></span>
+      <div class="my-4 border-b border-slate-800 w-full text-center">
+        <!-- <span><i>no bio yet...</i></span> -->
       </div>
       <!-- end bio -->
 
       <!-- user info's -->
-      <div class="w-full flex flex-col gap-3">
+      <div
+        class="p-2 mt-4 w-full flex shadow-[0_-4px_6px_rgba(0,0,0,0.1)] flex-col gap-3 h-[100px] overflow-y-scroll border-t border-b border-slate-400">
         <!-- joined at -->
         <div class="flex justify-between">
           <span class="font-bold text-gray-600">joined at</span>
@@ -72,6 +73,14 @@
             user.profile.dislikes }}</span>
         </div>
       </div>
+
+      <!-- notifications -->
+      <div class="w-full">
+        <div class="flex items-center  justify-center bg-primary p-2 text-white font-bold">
+          <h1>Notifcation</h1>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
