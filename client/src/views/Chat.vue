@@ -1,6 +1,6 @@
 <template>
   <!-- main window -->
-  <main class="flex flex-col gap-0  sm:w-2xl md:w-3xl lg:w-[888px] border h-[566px]">
+  <main class="flex flex-col gap-0  sm:w-2xl md:w-3xl lg:w-[888px] border border-slate-400 h-[566px]">
     <header-component></header-component>
     <div class="flex-1 flex flex-col lg:flex-row justify-center h-[200px]">
       <user-information></user-information>
@@ -21,13 +21,14 @@
           <!-- end chat body -->
 
           <!-- chat actions -->
-          <!-- <form class="flex gap-2 p-2 bg-gray-100 border-t-2 border-gray-200 relative" @submit.prevent="sendMessage">
+          <form class="flex gap-2 p-2 bg-gray-100 border-t-2 border-gray-200 relative" @submit.prevent="sendMessage">
             <span v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :leave="{ opacity: 0 }" v-if="isTyping"
               class="w-full text-center text-gray-500 absolute bottom-full">
               <small>{{ typingText }}</small>
             </span>
-            <input v-model="message" ref="messageInput" placeholder="Type a message..." type="text" @input="onTyping"
-              @blur="onStopTyping" class="flex-1  outline outline-gray-400 p-2 text-sm bg-white" />
+            <input v-model="message" ref="messageInput" placeholder="#global - Type a message..." type="text"
+              @input="onTyping" @blur="onStopTyping"
+              class="flex-1  p-3 outline-none focus:ring  transition-all duration-100 text-sm bg-white" />
 
             <emoji-picker :showEmoji="showEmoji" @emoji-selected="emojiHandler"></emoji-picker>
 
@@ -39,7 +40,7 @@
               class="send-btn font-bold cursor-pointer text-white px-4 py-2 shadow-inner hover:opacity-90 hover:translate-y-[-3px] duration-200">
               <ph-paper-plane-right :size="14" weight="fill"></ph-paper-plane-right>
             </button>
-          </form> -->
+          </form>
         </div>
       </div>
 
@@ -293,13 +294,7 @@ input {
   background: linear-gradient(rgb(98, 122, 173), rgb(89, 114, 168));
 }
 
-input {
-  animation: default 0.3s forwards;
-}
 
-input:focus {
-  animation: lift 0.3s forwards;
-}
 
 .emoji-btn,
 img {
@@ -322,8 +317,8 @@ img:hover {
 }
 
 .chat-section {
-  background: #fafafa;
-  background: linear-gradient(179deg, rgba(250, 250, 250, 1) 0%, rgba(171, 171, 171, 1) 100%);
+  background: #ffffff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 33%, rgba(237, 237, 237, 1) 100%);
 }
 
 :deep(.message-emoji) {
