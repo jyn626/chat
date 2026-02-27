@@ -29,7 +29,7 @@ body {
   /* color: rgb(29, 33, 41); */
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   /* flex-direction: column; */
   min-height: 100vh;
   margin: 0;

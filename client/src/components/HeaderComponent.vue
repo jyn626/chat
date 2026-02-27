@@ -1,6 +1,6 @@
 <template>
   <!-- header -->
-  <div class="header w-full py-2.5 px-4 flex md:flex-row flex-col justify-between items-center">
+  <div class="header w-full  py-2.5 px-4 flex md:flex-row flex-col justify-between items-center">
     <h1 class="text-white font-bold">> Chat</h1>
 
     <div>

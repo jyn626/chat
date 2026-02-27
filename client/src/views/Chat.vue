@@ -1,18 +1,19 @@
 <template>
   <!-- main window -->
-  <main class="flex flex-col gap-0  w-full sm:w-2xl md:w-3xl lg:w-[85vw]">
+  <main class="flex flex-col gap-0  sm:w-2xl md:w-3xl lg:w-[888px] border h-[566px]">
     <header-component></header-component>
-    <div class="flex-1 flex flex-col lg:flex-row justify-center">
+    <div class="flex-1 flex flex-col lg:flex-row justify-center h-[200px]">
       <user-information></user-information>
       <!-- Chat Section -->
-      <div class="flex-1 bg-white flex">
+      <div class="chat-section  flex-1 flex">
         <!-- chat box -->
         <div v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :duration="300"
           class="flex-1 flex flex-col justify-between">
           <!-- chat body -->
-          <div v-if="messages"
+          <!-- 
             class="p-2 flex-1 flex flex-col gap-3 min-h-[400px] max-h-[400px] lg:min-h-[660px] lg:max-h-[660px] overflow-y-scroll"
-            ref="chatBox">
+           -->
+          <div v-if="messages" ref="chatBox">
             <div v-for="(data, index) in messages" :key="data.id" class="flex flex-col p-1.5 gap-1">
               <chat-body :data="data" :user="user"></chat-body>
             </div>
@@ -20,7 +21,7 @@
           <!-- end chat body -->
 
           <!-- chat actions -->
-          <form class="flex gap-2 p-2 bg-gray-100 border-t-2 border-gray-200 relative" @submit.prevent="sendMessage">
+          <!-- <form class="flex gap-2 p-2 bg-gray-100 border-t-2 border-gray-200 relative" @submit.prevent="sendMessage">
             <span v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :leave="{ opacity: 0 }" v-if="isTyping"
               class="w-full text-center text-gray-500 absolute bottom-full">
               <small>{{ typingText }}</small>
@@ -38,7 +39,7 @@
               class="send-btn font-bold cursor-pointer text-white px-4 py-2 shadow-inner hover:opacity-90 hover:translate-y-[-3px] duration-200">
               <ph-paper-plane-right :size="14" weight="fill"></ph-paper-plane-right>
             </button>
-          </form>
+          </form> -->
         </div>
       </div>
 
@@ -320,7 +321,7 @@ img:hover {
   transform: scale(1.02);
 }
 
-main {
+.chat-section {
   background: #fafafa;
   background: linear-gradient(179deg, rgba(250, 250, 250, 1) 0%, rgba(171, 171, 171, 1) 100%);
 }

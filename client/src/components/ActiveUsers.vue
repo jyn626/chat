@@ -1,9 +1,9 @@
 <template>
   <!-- Users List Section -->
-  <div v-motion-fade class="bg-white  lg:w-[170px]">
-    <div>
-      <h2 class="header p-2 font-bold text-white text-center">Active Users</h2>
-      <div class="flex flex-col">
+  <div v-motion-fade class="bg-white lg:w-[170px] flex flex-col overflow-y-auto">
+    <div class="flex-1 flex flex-col">
+      <h2 class="header p-2 font-bold text-white text-center sticky top-0">Active Users</h2>
+      <div class="flex flex-col flex-1 overflow-y-auto">
         <!-- TODO: this will be clickable and redirect to user's profile page :) -->
         <div v-for="user in activeUsers" class="p-2 flex gap-5 hover:bg-gray-100 items-center cursor-pointer">
           <img :src="user.profilePicture
