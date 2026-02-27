@@ -5,10 +5,10 @@
     <div class="flex-1 flex flex-col lg:flex-row justify-center h-[200px]">
       <user-information></user-information>
       <!-- Chat Section -->
-      <div class="chat-section  flex-1 flex flex-col">
+      <div class="chat-section flex-1 flex flex-col">
         <!-- chat box -->
         <div v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :duration="300"
-          class="flex-1 flex flex-col justify-between">
+          class="px-2.5 py-2 flex-1 flex flex-col justify-between">
           <!-- chat body -->
           <!-- 
             class="p-2 flex-1 flex flex-col gap-3 min-h-[400px] max-h-[400px] lg:min-h-[660px] lg:max-h-[660px] overflow-y-scroll"
@@ -18,9 +18,8 @@
               <chat-body :data="data" :user="user"></chat-body>
             </div>
           </div>
+
           <!-- end chat body -->
-
-
         </div>
         <!-- chat actions -->
         <form class="flex gap-2 p-2 bg-gray-100 border-t-2 border-gray-200 relative" @submit.prevent="sendMessage">
