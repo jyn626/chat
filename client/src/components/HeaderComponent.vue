@@ -1,7 +1,7 @@
 <template>
   <!-- header -->
   <div class="header w-full py-2.5 px-4 flex md:flex-row flex-col justify-between items-center">
-    <h1 class="text-white font-bold">> Open Line</h1>
+    <h1 class="text-white font-bold">> Chat</h1>
 
     <div>
       <router-link to="/chat" class="header-btn hover:translate-y-[-1.5px] cursor-pointer">

@@ -1,8 +1,7 @@
 <template>
   <!-- user profile section -->
   <!-- <div v-motion-slide-right -->
-  <div v-motion-fade
-    class="bg-white border border-gray-200 p-4 shadow-xs md:shadow-lg w-full lg:w-[200px] overflow-y-auto">
+  <div v-motion-fade class="bg-white border border-gray-200 p-4  w-full lg:w-[200px] overflow-y-auto">
     <div v-if="user" class="flex flex-col items-center justify-center">
       <!-- pfp -->
       <img :src="user.profile && user.profile.profilePicture

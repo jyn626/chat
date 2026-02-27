@@ -1,6 +1,6 @@
 <template>
   <!-- main window -->
-  <main class="flex flex-col gap-0 border border-gray-400 w-full sm:w-2xl md:w-3xl lg:w-[85vw]">
+  <main class="flex flex-col gap-0  w-full sm:w-2xl md:w-3xl lg:w-[85vw]">
     <header-component></header-component>
     <div class="flex-1 flex flex-col lg:flex-row justify-center">
       <user-information></user-information>
@@ -318,6 +318,11 @@ img:hover {
 
 .message-box:active {
   transform: scale(1.02);
+}
+
+main {
+  background: #fafafa;
+  background: linear-gradient(179deg, rgba(250, 250, 250, 1) 0%, rgba(171, 171, 171, 1) 100%);
 }
 
 :deep(.message-emoji) {
