@@ -14,13 +14,13 @@
     </div>
 
     <p :class="[
-      'font-bold text-[#29487d] mt-2',
-      { 'text-green-600': data.userId == user?.id },
+      'font-semibold text-[#29487d] mt-2',
+      { 'text-green-700': data.userId == user?.id },
     ]">
       <small class="mr-2">{{
         data.userId == user?.id ? "You" : data.username
       }}</small>
-      <small class="text-gray-400 font-light">{{
+      <small class="time text-gray-400">{{
         new Date(data.time).toLocaleTimeString([], { timeStyle: "short" })
       }}</small>
     </p>
@@ -64,5 +64,9 @@ export default {
   max-width: 28px;
   max-height: 28px;
   object-fit: cover;
+}
+
+.time {
+  font-size: 11px !important;
 }
 </style>
