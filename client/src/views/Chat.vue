@@ -5,7 +5,7 @@
     <div class="flex-1 flex flex-col lg:flex-row justify-center h-[200px]">
       <user-information></user-information>
       <!-- Chat Section -->
-      <div class="chat-section  flex-1 flex">
+      <div class="chat-section  flex-1 flex flex-col">
         <!-- chat box -->
         <div v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :duration="300"
           class="flex-1 flex flex-col justify-between">
@@ -20,28 +20,29 @@
           </div>
           <!-- end chat body -->
 
-          <!-- chat actions -->
-          <form class="flex gap-2 p-2 bg-gray-100 border-t-2 border-gray-200 relative" @submit.prevent="sendMessage">
-            <span v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :leave="{ opacity: 0 }" v-if="isTyping"
-              class="w-full text-center text-gray-500 absolute bottom-full">
-              <small>{{ typingText }}</small>
-            </span>
-            <input v-model="message" ref="messageInput" placeholder="#global - Type a message..." type="text"
-              @input="onTyping" @blur="onStopTyping"
-              class="flex-1  p-3 outline-none focus:ring  transition-all duration-100 text-sm bg-white" />
 
-            <emoji-picker :showEmoji="showEmoji" @emoji-selected="emojiHandler"></emoji-picker>
-
-            <button type="button" @click="showEmoji = !showEmoji" class="emoji-btn cursor-pointer text-gray-600 mx-2">
-              <ph-smiley size="18"></ph-smiley>
-            </button>
-
-            <button type="submit"
-              class="send-btn font-bold cursor-pointer text-white px-4 py-2 shadow-inner hover:opacity-90 hover:translate-y-[-3px] duration-200">
-              <ph-paper-plane-right :size="14" weight="fill"></ph-paper-plane-right>
-            </button>
-          </form>
         </div>
+        <!-- chat actions -->
+        <form class="flex gap-2 p-2 bg-gray-100 border-t-2 border-gray-200 relative" @submit.prevent="sendMessage">
+          <span v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :leave="{ opacity: 0 }" v-if="isTyping"
+            class="w-full text-center text-gray-500 absolute bottom-full">
+            <small>{{ typingText }}</small>
+          </span>
+          <input v-model="message" ref="messageInput" placeholder="#global - Type a message..." type="text"
+            @input="onTyping" @blur="onStopTyping"
+            class="flex-1  p-3 outline-none focus:ring  transition-all duration-100 text-sm bg-white" />
+
+          <emoji-picker :showEmoji="showEmoji" @emoji-selected="emojiHandler"></emoji-picker>
+
+          <button type="button" @click="showEmoji = !showEmoji" class="emoji-btn cursor-pointer text-gray-600 mx-2">
+            <ph-smiley size="18"></ph-smiley>
+          </button>
+
+          <button type="submit"
+            class="send-btn font-bold cursor-pointer text-white px-4 py-2 shadow-inner hover:opacity-90 hover:translate-y-[-3px] duration-200">
+            <ph-paper-plane-right :size="14" weight="fill"></ph-paper-plane-right>
+          </button>
+        </form>
       </div>
 
       <active-users :activeUsers="activeUsers"></active-users>
@@ -318,7 +319,7 @@ img:hover {
 
 .chat-section {
   background: #ffffff;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 33%, rgba(237, 237, 237, 1) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 33%, rgba(247, 247, 247, 1) 100%);
 }
 
 :deep(.message-emoji) {
