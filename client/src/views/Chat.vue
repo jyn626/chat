@@ -1,6 +1,6 @@
 <template>
   <!-- main window -->
-  <main class="flex flex-col gap-0  sm:w-2xl md:w-3xl lg:w-[888px] border border-slate-400 h-[566px]">
+  <main class="flex flex-col gap-0  sm:w-2xl md:w-3xl lg:w-[980px] border border-slate-400 h-[580px]">
     <header-component></header-component>
     <div class="flex-1 flex flex-col lg:flex-row justify-center h-[200px]">
       <user-information></user-information>
@@ -13,6 +13,8 @@
           <!-- 
             class="p-2 flex-1 flex flex-col gap-3 min-h-[400px] max-h-[400px] lg:min-h-[660px] lg:max-h-[660px] overflow-y-scroll"
            -->
+
+          <!-- messages -->
           <div v-if="messages" ref="chatBox">
             <div v-for="(data, index) in messages" :key="data.id" class="flex flex-col p-1.5 gap-1">
               <chat-body :data="data" :user="user"></chat-body>

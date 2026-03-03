@@ -1,6 +1,6 @@
 <template>
 
-  <div v-if="data.type == 'chat'">
+  <div v-motion-fade v-if="data.type == 'chat'">
     <!-- {{ JSON.stringify(data) }} -->
     <div class="flex flex-row flex-wrap gap-4">
       <img :src="data.profilePicture
