@@ -21,12 +21,12 @@ This project is inspired by <a href="https://chat.ponkis.xyz">chat.ponkis.xyz</a
 ### Chat Page
 ---
 <small><i>last updated on 3/4/2026</i></small>
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0b0b6a99-126c-4f4b-b10f-b070de07ad35" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2fe0c9c3-fde9-49b4-8687-63baffa6c99e" />
 
 ### Timeline Page
 ---
 <small><i>last updated on 3/4/2026</i></small>
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/31a038dd-bd32-4d72-b542-9aa6ba8973f0" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6dd7137f-981a-41e4-8f29-170e0fdf7fe9" />
 
 
 ## Installation
