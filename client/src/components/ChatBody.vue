@@ -6,9 +6,9 @@
       <img :src="data.profilePicture
         ? `http://localhost:8080${data.profilePicture}`
         : '/def_pfp_6.jpg'
-        " class="pfp border-2 border-gray-400" />
+        " class="pfp border-2 border-slate-200 hover:scale-110 hover:rotate-12 duration-200" />
       <span
-        class="flex break-all items-center text-xs bg-blue-50 border border-blue-100 px-2.5 py-0.5 cursor-pointer message-box max-w-[300px]"
+        class=" hover:scale-105 duration-100 flex break-all items-center text-xs bg-blue-50 border border-blue-100 px-2.5 py-0.5 cursor-pointer message-box max-w-[300px]"
         v-html="renderMessage(data.message)">
       </span>
     </div>
@@ -25,8 +25,8 @@
       }}</small>
     </p>
   </div>
-  <div v-else class="text-center">
-    <div class="flex w-full items-center rounded-full">
+  <div v-else class="text-center ">
+    <div class="flex w-full items-center rounded-full ">
       <div class="flex-1 border-b border-gray-300"></div>
       <small class="text-gray-600 leading-8 px-8 py-3">{{ data.message }}</small>
       <!-- <span class="text-black text-lg font-semibold leading-8 px-8 py-3">Notification</span> -->
