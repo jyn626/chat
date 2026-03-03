@@ -28,7 +28,11 @@
   <div v-else class="text-center ">
     <div class="flex w-full items-center rounded-full ">
       <div class="flex-1 border-b border-gray-300"></div>
-      <small class="text-gray-600 leading-8 px-8 py-3">{{ data.message }}</small>
+      <small class="text-gray-600 leading-8 px-8 py-3"> <span class="text-blue-400 font-semibold">{{
+        data.message.split(' ').shift()
+      }}</span> {{
+            data.message.split(' ').slice(1).join(' ') }}
+      </small>
       <!-- <span class="text-black text-lg font-semibold leading-8 px-8 py-3">Notification</span> -->
       <div class="flex-1 border-b border-gray-300"></div>
     </div>
@@ -40,8 +44,6 @@ export default {
   props: ['data', 'user'],
 
   mounted() {
-    console.log('user' + JSON.stringify(this.user))
-    console.log('data' + JSON.stringify(this.data))
   },
 
   methods: {
