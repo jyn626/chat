@@ -7,7 +7,7 @@
     <header-component></header-component>
 
     <div class="relative bg-white border-b border-gray-400">
-      <div class="h-[220px] overflow-hidden bg-gray-300">
+      <div class="h-[200px] overflow-hidden bg-gray-300">
         <img src="https://via.placeholder.com/1200x400" class="w-full h-full object-cover" alt="banner" />
         <button class="absolute top-4 right-4 bg-black/50 p-1 rounded text-white"><ph-pencil-simple /></button>
       </div>
