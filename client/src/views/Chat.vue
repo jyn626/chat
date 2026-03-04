@@ -5,17 +5,13 @@
     <div class="flex-1 flex flex-col lg:flex-row justify-center h-[200px]">
       <user-information></user-information>
       <!-- Chat Section -->
-      <div class="chat-section flex-1 flex flex-col  ">
+      <div class="chat-section flex-1 flex flex-col">
         <!-- chat box -->
         <div v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :duration="300"
-          class="px-2.5 py-2 flex-1 flex flex-col justify-between overflow-y-scroll">
+          class="px-2.5 py-2 flex-1 flex flex-col justify-between overflow-y-scroll" ref="chatBox">
           <!-- chat body -->
-          <!-- 
-            class="p-2 flex-1 flex flex-col gap-3 min-h-[400px] max-h-[400px] lg:min-h-[660px] lg:max-h-[660px] overflow-y-scroll"
-           -->
-
           <!-- messages -->
-          <div v-if="messages" ref="chatBox">
+          <div v-if="messages">
             <div v-for="(data, index) in messages" :key="data.id" class="flex flex-col p-1.5 gap-1">
               <chat-body :data="data" :user="user"></chat-body>
             </div>
@@ -167,25 +163,18 @@ export default {
 
     scrollToBottom() {
       this.$nextTick(() => {
-        const el = this.$refs.chatBox;
-        if (!el) return;
-        el.scrollTop = el.scrollHeight;
+        const chatBox = this.$refs.chatBox;
+        if (!chatBox) return;
+        chatBox.scrollTop = chatBox.scrollHeight;
       });
     },
 
   },
 
-  beforeUnmount() {
-    socket.off("joined");
-    socket.off("active-users");
-    socket.off("left");
-    socket.off("chat:message");
-    socket.off("typing");
-    socket.off("stop_typing");
-  },
 
   async mounted() {
     await this.fetchChats();
+    this.scrollToBottom()
 
     this.user = this.store.getUser;
     if (!this.user) {
@@ -240,6 +229,15 @@ export default {
       this.typingText = null;
     });
 
+  },
+
+  beforeUnmount() {
+    socket.off("joined");
+    socket.off("active-users");
+    socket.off("left");
+    socket.off("chat:message");
+    socket.off("typing");
+    socket.off("stop_typing");
   },
 };
 </script>
