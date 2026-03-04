@@ -127,7 +127,6 @@ export default {
         time: currentTime,
         userId: this.user.id,
       });
-      // this.messages.push(this.message)
       this.message = "";
       this.showEmoji = false;
     },
@@ -154,7 +153,6 @@ export default {
         const newPosition = start + emoji.length;
         input.setSelectionRange(newPosition, newPosition);
       });
-      // this.showEmoji = false;
     },
 
     renderMessage(raw) {
@@ -164,28 +162,13 @@ export default {
         let imgEl = `<img src='${path}' alt='${emoji}' class='message-emoji'/>`;
         rendered = rendered.replaceAll(emoji, imgEl);
       });
-      // console.log(`<span class='w-[300px] text-red text-wrap'>${rendered}</span>`);
       return `<span class='text-red text-wrap'>${rendered}</span>`;
     },
-
-    // async logout() {
-    //   // localStorage.removeItem("user");
-    //   // await fetch("http://localhost:8080/api/auth/logout", {
-    //   //   method: "POST",
-    //   //   credentials: "include",
-    //   // });
-
-    //   await authApi.logout();
-
-    //   socket.emit("left");
-
-    //   this.$router.push("/");
-    // },
 
     scrollToBottom() {
       this.$nextTick(() => {
         const el = this.$refs.chatBox;
-        if (!el) return;   // important guard
+        if (!el) return;
         el.scrollTop = el.scrollHeight;
       });
     },
@@ -203,10 +186,7 @@ export default {
 
   async mounted() {
     await this.fetchChats();
-    // this.scrollToBottom();
 
-    // this.user = await userApi.getMe();
-    // this.user = this.$store.state.user;
     this.user = this.store.getUser;
     if (!this.user) {
       await this.store.fetchUser();
@@ -227,7 +207,6 @@ export default {
         type: "joined",
       });
 
-      // this.scrollToBottom();
     });
 
     socket.on("active-users", (users) => {
@@ -240,7 +219,6 @@ export default {
         type: "left",
       });
 
-      // this.scrollToBottom();
     });
 
     socket.on("chat:message", (data) => {
@@ -252,8 +230,6 @@ export default {
         profilePicture: data.user.profilePicture || null,
         userId: data.user.id,
       });
-
-      // this.scrollToBottom();
     });
 
     socket.on("typing", (data) => {
@@ -264,7 +240,6 @@ export default {
       this.typingText = null;
     });
 
-    // this.$nextTick(() => this.$nextTick(() => this.scrollToBottom()));
   },
 };
 </script>

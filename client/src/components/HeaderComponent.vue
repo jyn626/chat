@@ -5,25 +5,21 @@
 
     <div>
       <router-link to="/chat" class="header-btn hover:translate-y-[-1.5px] cursor-pointer">
-        <ph-globe></ph-globe>
-        open line
+        <ph-globe size="14"></ph-globe>
       </router-link>
 
       <router-link :to="{ name: 'UserProfile', params: { 'username': 'doujin22' } }"
         class="header-btn hover:translate-y-[-1.5px] cursor-pointer">
         <!-- <ph-user></ph-user> -->
-        <ph-app-window></ph-app-window>
-        timeline
+        <ph-app-window size="14"></ph-app-window>
       </router-link>
 
       <router-link to="/profile/edit" class="header-btn hover:translate-y-[-1.5px] cursor-pointer">
-        <ph-pencil-simple></ph-pencil-simple>
-        edit profile
+        <ph-pencil-simple size="14"></ph-pencil-simple>
       </router-link>
 
       <button class="header-btn hover:translate-y-[-1.5px] cursor-pointer" @click="logout">
-        <ph-sign-out></ph-sign-out>
-        Logout
+        <ph-sign-out size="14"></ph-sign-out>
       </button>
     </div>
   </div>
