@@ -125,6 +125,7 @@ export default {
       });
       this.message = "";
       this.showEmoji = false;
+      this.scrollToBottom()
     },
 
     onTyping() {
@@ -164,17 +165,30 @@ export default {
     scrollToBottom() {
       this.$nextTick(() => {
         const chatBox = this.$refs.chatBox;
-        if (!chatBox) return;
-        chatBox.scrollTop = chatBox.scrollHeight;
+
+        if (chatBox) {
+          chatBox.scrollTo({
+            top: chatBox.scrollHeight,
+            behavior: "smooth",
+          });
+
+        }
       });
     },
 
   },
 
+  watch: {
+    messages: {
+      handler() {
+        this.scrollToBottom();
+      },
+      deep: true
+    }
+  },
 
   async mounted() {
     await this.fetchChats();
-    this.scrollToBottom()
 
     this.user = this.store.getUser;
     if (!this.user) {
@@ -229,6 +243,7 @@ export default {
       this.typingText = null;
     });
 
+    this.scrollToBottom()
   },
 
   beforeUnmount() {
