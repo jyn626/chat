@@ -1,5 +1,5 @@
 <template>
-  <loading-overlay :loading="isLoading"></loading-overlay>
+  <!-- <loading-overlay :loading="isLoading"></loading-overlay> -->
 
   <main
     class="flex flex-col w-full sm:w-2xl md:w-3xl lg:w-7xl mx-auto bg-[#e9ebee] min-h-screen border-x border-gray-400">
