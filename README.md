@@ -1,5 +1,9 @@
 # Chat Application
 
+> [!NOTE]
+> ⚠️ This project is a **work in progress**.
+> Some features are incomplete or unstable.
+
 ## Overview
 A simple realtime chat applicaton, allows users to register, log in, and exchange messages seamlessley in a public server. Built with Express.js, Vue.js, Prisma ORM, and MySQL. 
 This project is inspired by <a href="https://chat.ponkis.xyz">chat.ponkis.xyz</a> and is developed solely for learning purposes.
@@ -9,6 +13,7 @@ This project is inspired by <a href="https://chat.ponkis.xyz">chat.ponkis.xyz</a
 -  <strong>Realtime messaging</strong>: Implemented websocket with socket.io library for realtime message updates.
 -  <strong>Posting</strong>: User can share their thoughts on their timeline.
 -  <strong>Profile Customization</strong>: User can edit their profile picture, username, and other information.
+
 
 ## Screenshots
 ### Login & Register Page
