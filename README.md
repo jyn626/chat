@@ -1,8 +1,8 @@
 # Chat Application
 
 > [!NOTE]
-> ⚠️ This project is a **work in progress**.
-> Some features are incomplete or unstable.
+> ⚠️ This project is **working in progress** <i>(nearly dumped and forgotten lmao).</i>
+> This is project is made `for fun`, and intended for learning web sockets only.
 
 ## Overview
 A simple realtime chat applicaton, allows users to register, log in, and exchange messages seamlessley in a public server. Built with Express.js, Vue.js, Prisma ORM, and MySQL. 
