@@ -8,8 +8,8 @@
 A simple realtime chat applicaton, allows users to register, log in, and exchange messages seamlessley in a public server. Built with Express.js, Vue.js, Prisma ORM, and MySQL. 
 This project is inspired by <a href="https://chat.ponkis.xyz">chat.ponkis.xyz</a> and is developed solely <b>for learning purposes</b>.
 
-## Features
--  <strong>User authentication</strong>: Cookie based JWT token login and registration system.
+## <center> Features as of now. </center>
+-  <strong>User authentication</strong>: Cookie based JWT token authentication system.
 -  <strong>Realtime messaging</strong>: Implemented websocket with socket.io library for realtime message updates.
 -  <strong>Posting</strong>: User can share their thoughts on their timeline.
 -  <strong>Profile Customization</strong>: User can edit their profile picture, username, and other information.
@@ -69,7 +69,7 @@ This project is inspired by <a href="https://chat.ponkis.xyz">chat.ponkis.xyz</a
    ```
    -  Access on http://localhost:5173
 
-## Development
+## Stack
 -  Frontend: Vue.js
 -  Backend: Express.js
 -  Websocket: socket.io
